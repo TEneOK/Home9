@@ -11,27 +11,33 @@ public class Main {
             sum += index;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
-        //task2
+//task2
         System.out.println("Task2");
-        Integer[] payWeek = {1000, 2450, 92, 5321, 300 };
-        Arrays.sort(payWeek);
-        int minPay = payWeek[args.length];
+        int[] payWeek = {1000, 2450, 92, 5321, 300};
+        int minPay = 1_000_000;
+        int maxPay = 1;
+        for (int num : payWeek) {
+            if (num < minPay) {
+                minPay = num;
+            }
+            if (num > maxPay) {
+                maxPay = num;
+            }
+        }
         System.out.println("Минимальная сумма трат за неделю составила " + minPay + " рублей.");
-        Arrays.sort(payWeek, Collections.reverseOrder());
-        int maxPay = payWeek[args.length];
         System.out.println("Максимальная сумма трат за неделю составила " + maxPay + " рублей.");
-        //task3
+//task3
         System.out.println("Task3");
-        int[] averageWeek = {32132,52100 ,40000 ,11000 , 5350};
+        int[] averageWeek = {32132, 52100, 40000, 11000, 53506};
         int averageSum = 0;
-        for (int index : payMonth) {
+        for (int index : averageWeek) {
             sum += index;
         }
-        double average = sum/ (averageWeek.length);
+        double average = sum / (averageWeek.length);
         System.out.println(average);
-        //task4
+//task4
         System.out.println("Task4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         int start = 0;
         int finish = reverseFullName.length - 1;
 
