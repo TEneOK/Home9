@@ -14,8 +14,8 @@ public class Main {
 //task2
         System.out.println("Task2");
         int[] payWeek = {1000, 2450, 92, 5321, 300};
-        int minPay = 1_000_000;
-        int maxPay = 1;
+        int minPay = payWeek[1];
+        int maxPay = payWeek[4];
         for (int num : payWeek) {
             if (num < minPay) {
                 minPay = num;
